@@ -1,0 +1,75 @@
+Roman to Integer Converter
+
+Problem Description
+
+The Roman to Integer problem requires converting a Roman numeral string to its corresponding integer value. Roman numerals are represented by seven different symbols with specific values:
+
+Symbol  Value
+I        1
+V        5
+X       10
+L       50
+C      100
+D      500
+M      1000
+
+Roman numerals are typically written from largest to smallest from left to right. However, there are specific cases where subtraction is used:
+
+· I can be placed before V (5) and X (10) to make 4 and 9
+· X can be placed before L (50) and C (100) to make 40 and 90
+· C can be placed before D (500) and M (1000) to make 400 and 900
+
+Examples
+
+Example 1:
+
+```
+Input: s = "III"
+Output: 3
+Explanation: III = 3
+```
+
+Example 2:
+
+```
+Input: s = "LVIII"
+Output: 58
+Explanation: L = 50, V = 5, III = 3
+```
+
+Example 3:
+
+```
+Input: s = "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90, IV = 4
+```
+
+Solution Approach
+
+The solution uses a straightforward approach:
+
+1. Mapping Creation: Create a hash map that maps each Roman numeral character to its integer value.
+2. Iterative Processing: Traverse through the input string from left to right.
+3. Comparison Logic: For each character:
+   · Get the current numeral's value
+   · Look ahead to get the next numeral's value (if exists)
+   · If the current value is less than the next value, subtract it from the result (handling cases like IV, IX, etc.)
+   · Otherwise, add it to the result
+
+
+Lyman's Analogy
+
+Think of reading Roman numerals like walking through a valley of numbers. As you move from left to right:
+
+· When you see a smaller number followed by a larger number, it's like stepping down into a valley - you subtract the smaller value because you're descending.
+· When you see a larger number followed by a smaller number (or equal numbers), it's like walking on level ground or climbing up - you add the values as you ascend.
+
+This "valley walking" analogy helps visualize why we subtract when a smaller numeral precedes a larger one (we're going downhill) and add otherwise (we're on level ground or going uphill).
+
+Complexity Analysis
+
+· Time Complexity: O(n), where n is the length of the input string. We process each character exactly once.
+· Space Complexity: O(1), as we use a fixed-size map (7 entries) regardless of input size.
+
+This solution efficiently handles all valid Roman numeral inputs by leveraging the predictable pattern of when to add versus subtract values based on the relative values of adjacent numerals.

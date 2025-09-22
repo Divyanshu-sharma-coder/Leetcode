@@ -1,0 +1,53 @@
+LeetCode Problem: 88. Merge Sorted Array
+
+Problem Statement: You are given two integer arraysnums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored.
+
+Example:
+
+```
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+```
+
+Approach Used in the Code
+
+Two Pointers (Backward Merging):
+
+1. Initialize pointers:
+   · i at last valid element of nums1 (index m-1)
+   · j at last element of nums2 (index n-1)
+   · idx at last position of merged array (index m+n-1)
+2. Compare and merge from the end:
+   · While both arrays have elements, compare nums1[i] and nums2[j]
+   · Place the larger element at nums1[idx] and move the respective pointer backward
+3. Handle remaining elements:
+   · If nums2 has remaining elements, copy them to the front
+   · nums1 elements are already in place if any remain
+
+Time Complexity: O(m + n)
+Space Complexity: O(1) (no extra space used)
+
+Lyman's Analogy
+
+Think of merging two stacks of sorted papers from bottom-up:
+
+Imagine you have two stacks of sorted papers (smallest on top, largest at bottom):
+
+· Stack A (nums1): has some real papers and empty slots at bottom
+· Stack B (nums2): has real papers only
+
+Instead of starting from the top (which would require shifting), you:
+
+1. Flip both stacks upside down (now largest elements are on top)
+2. Compare the top papers from both stacks
+3. Place the larger paper into the bottom empty slots of Stack A
+4. Repeat until one stack is empty
+5. If Stack B has papers left, place them all in the remaining slots
+
+This avoids overwriting any unprocessed elements in Stack A since we're filling from the end backward!
+
+Why this works: The empty slots at the end of nums1 serve as perfect landing spots for the largest elements first, ensuring we never overwrite unprocessed values from nums1.

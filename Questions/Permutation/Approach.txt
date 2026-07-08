@@ -1,0 +1,70 @@
+🧩 Permutation in String (LeetCode Problem)
+
+📌 Question
+
+Given two strings s1 and s2, return true if s2 contains a permutation of s1, otherwise return false.
+
+In other words, check if one of the substrings of s2 is an anagram of s1.
+
+
+---
+
+💡 Solution Approach
+
+We solve the problem using frequency counting and a sliding window technique:
+
+1. Count the frequency of each character in s1.
+
+
+2. Traverse s2 with a window of length equal to s1.length().
+
+
+3. For each window:
+
+Count character frequencies.
+
+Compare with s1's frequency array.
+
+
+
+4. If they match → s2 contains a permutation of s1.
+
+
+5. If no match after sliding through → return false.
+
+
+
+Time Complexity: O(26 * n * m) (brute force sliding window).
+Space Complexity: O(26) (frequency arrays).
+
+
+---
+
+📝 Example
+
+s1 = "ab"
+s2 = "eidbaooo"
+
+Output: true
+Explanation: "ba" is a permutation of "ab", and it exists in "eidbaooo".
+
+
+---
+
+🎯 Layman’s Analogy
+
+Imagine you have a bag of letters (s1 = "ab") and you want to check if you can pick the same set of letters in the same quantity from another larger bag (s2 = "eidbaooo").
+
+Your small bag: a + b
+
+Look inside the big bag window by window:
+
+"ei" → doesn’t match
+
+"id" → doesn’t match
+
+…
+
+"ba" → matches exactly!
+
+

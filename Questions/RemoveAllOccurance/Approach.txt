@@ -1,0 +1,63 @@
+Remove All Occurrences of a Substring - LeetCode Solution
+
+Problem Description
+
+Given two strings s and part, perform the following operation on s until all occurrences of part as a substring are removed:
+
+· Find the leftmost occurrence of part in s and remove it from s.
+
+Return s after removing all occurrences of part.
+
+A substring is a contiguous sequence of characters in a string.
+
+Examples
+
+Example 1:
+
+```
+Input: s = "daabcbaabcbc", part = "abc"
+Output: "dab"
+Explanation: 
+- Remove "abc" starting at index 2: "daabcbaabcbc" → "dabaabcbc"
+- Remove "abc" starting at index 4: "dabaabcbc" → "dababc"
+- Remove "abc" starting at index 3: "dababc" → "dab"
+```
+
+Example 2:
+
+```
+Input: s = "axxxxyyyyb", part = "xy"
+Output: "ab"
+Explanation: 
+- Remove "xy" starting at index 2: "axxxxyyyyb" → "axxxyyyb"
+- Remove "xy" starting at index 3: "axxxyyyb" → "axxyyb"
+- Remove "xy" starting at index 2: "axxyyb" → "axyb"
+- Remove "xy" starting at index 1: "axyb" → "ab"
+```
+
+Approach
+
+The solution uses a straightforward iterative approach:
+
+1. Initialize: Get the lengths of both strings s and part
+2. Iterative Removal:
+   · Use a while loop that continues as long as the string s has length > 0 and contains the substring part
+   · In each iteration, find the first occurrence of part in s
+   · Remove that occurrence from s using the erase() method
+3. Termination: The loop exits when no more occurrences of part are found in s
+4. Return Result: The modified string s is returned as the result
+
+
+Complexity Analysis
+
+· Time Complexity: O(n²) in the worst case, where n is the length of string s. This is because each erase() operation can take O(n) time, and we might need to perform O(n) such operations.
+· Space Complexity: O(1) as we're modifying the input string in place without using additional data structures.
+
+Alternative Approaches
+
+1. Stack-based Approach: Use a stack to efficiently build the result string while checking for the pattern. This can potentially improve time complexity in some cases.
+2. KMP Algorithm: For a more efficient solution, the Knuth-Morris-Pratt algorithm could be adapted to find and remove all occurrences of the substring.
+
+Try It Yourself
+
+You can test this solution with different inputs by modifying the s and part variables in the code. The algorithm will repeatedly remove all occurrences of part from s until none remain

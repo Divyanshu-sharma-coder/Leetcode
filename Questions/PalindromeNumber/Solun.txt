@@ -1,0 +1,74 @@
+Palindrome Number - LeetCode Solution
+
+📋 Problem Description
+
+Problem Link: Palindrome Number - LeetCode
+
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+A palindrome number reads the same forward and backward. For example:
+
+· 121 is a palindrome
+· 123 is not a palindrome
+· -121 is not a palindrome (becomes 121- when reversed)
+
+🧪 Examples
+
+Example 1:
+
+```
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+```
+
+Example 2:
+
+```
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+```
+
+Example 3:
+
+```
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+```
+
+💡 Code Approach
+
+The solution uses a mathematical approach to reverse the digits of the number and then compares the reversed number with the original:
+
+1. Negative Check: If the number is negative, it immediately returns false since negative numbers cannot be palindromes due to the minus sign.
+2. Digit Reversal:
+   · Store the original number in a temporary variable
+   · Extract digits one by one using modulus operation (x % 10)
+   · Build the reversed number by multiplying the current reversed value by 10 and adding the extracted digit
+   · Remove the last digit from the original number using division (x / 10)
+3. Comparison: Compare the reversed number with the original stored value to determine if it's a palindrome.
+4. Edge Case Handling: Uses long type for the reversed number to prevent integer overflow when reversing large numbers.
+
+🧠 Lyman's Analogy
+
+Think of this process like checking if a word is a palindrome by writing it backward and comparing:
+
+· The original number is like the word written normally
+· The reversed number is like the word written backward
+· Just as you'd compare "racecar" with "racecar" backward (which is still "racecar"), we compare the original number with its reversed version
+
+The mathematical operations (modulus and division) are like carefully peeling off each digit from the end and building a new number in reverse order, much like reading a word letter by letter from the end to the beginning.
+
+⏱ Complexity Analysis
+
+· Time Complexity: O(log₁₀(n)) - We iterate through each digit of the number
+· Space Complexity: O(1) - We use only a constant amount of extra space
+
+✅ Key Features
+
+· Handles negative numbers efficiently
+· Prevents integer overflow by using long type
+· Simple and intuitive mathematical approach
+· No string conversion required (as required by some problem constraints)

@@ -1,0 +1,59 @@
+Problem Statement
+Given an array of integers pages[] representing the number of pages in each book and an integer m for the number of students, allocate books (in contiguous order) such that:
+
+Every student gets at least one book.
+
+All books are allocated.
+
+Allocation is contiguous (no skipping books).
+
+The goal is to minimize the maximum number of pages assigned to any student.
+
+Approach Used (Based on Your Code)
+This solution uses binary search on the possible answer (the minimal maximum number of pages):
+
+If m > n (students more than books), allocation is impossible, so output -1.
+
+Otherwise, define the search space for binary search between max(pages) and sum(pages).
+
+For each possible "max pages" (mid), use a helper isValid function:
+
+Traverse the books, accumulating page sums per student.
+
+If the sum exceeds mid, assign the next student, and reset their sum.
+
+If any book by itself is greater than mid, return false.
+
+If more than m students are needed, return false.
+
+The answer is the smallest mid for which allocation is valid.
+
+This method efficiently narrows the possible answer using binary search, leading to time complexity of 
+O
+(
+n
+log
+⁡
+(
+sum of pages
+)
+)
+O(nlog(sum of pages)).
+
+Example
+Suppose arr = {12, 34, 67, 90} and m = 2:
+
+One allocation: Student 1 gets {12, 34, 67} (113 pages), Student 2 gets {90} (90 pages).
+
+Maximum pages for any student is 113.
+
+Re-arrange: Student 1 gets {12, 34}, Student 2 gets {67, 90} (34 and 157 respectively), but this increases the max (157).
+
+The binary search narrows down to the minimal possible maximum.
+
+Lyman's Analogy
+Think of the books as "containers of work," and the students as workers assigned contiguous tasks:
+
+Imagine dividing a pile of logs (books) among workers so no one worker has a wildly heavier load than others.
+
+You want to balance each worker's burden by splitting the logs into contiguous clusters, ensuring that the hardest-working person is as comfortable as possible—not overloaded.

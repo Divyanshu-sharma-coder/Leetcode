@@ -1,0 +1,144 @@
+Sorting Algorithms in C++
+
+A comprehensive collection of sorting algorithms implemented in C++. This repository serves as an educational resource for understanding various sorting techniques, their implementations, and performance characteristics.
+
+📋 Table of Contents
+
+· Algorithms Overview
+· Complexity Analysis
+· Lyman's Analogy
+· Installation & Usage
+· Examples
+· Contributing
+· License
+
+Algorithms Overview
+
+1. Bubble Sort
+
+A simple comparison-based algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
+
+Key Characteristics:
+
+· Stable sorting algorithm
+· In-place sorting
+· Adaptive (performs better on partially sorted data)
+
+2. Selection Sort
+
+Divides the input list into two parts: a sorted sublist and an unsorted sublist. The algorithm repeatedly finds the minimum element from the unsorted part and puts it at the beginning.
+
+Key Characteristics:
+
+· Not stable (may change the relative order of equal elements)
+· In-place sorting
+· Performs a limited number of swaps
+
+3. Insertion Sort
+
+Builds the final sorted array one item at a time by repeatedly taking the next element and inserting it into the correct position in the already-sorted part.
+
+Key Characteristics:
+
+· Stable sorting algorithm
+· In-place sorting
+· Efficient for small data sets or nearly sorted data
+
+4. Merge Sort
+
+A divide-and-conquer algorithm that divides the input array into two halves, sorts them recursively, and then merges the two sorted halves.
+
+Key Characteristics:
+
+· Stable sorting algorithm
+· Not in-place (requires additional memory)
+· Consistent O(n log n) performance
+
+5. Quick Sort
+
+Another divide-and-conquer algorithm that selects a 'pivot' element and partitions the array around the pivot, then recursively sorts the sub-arrays.
+
+Key Characteristics:
+
+· Not stable
+· In-place sorting (with efficient implementations)
+· Generally the fastest sorting algorithm in practice
+
+6. Heap Sort
+
+Creates a heap data structure from the input array and then repeatedly extracts the maximum element to form the sorted array.
+
+Key Characteristics:
+
+· Not stable
+· In-place sorting
+· Guaranteed O(n log n) performance
+
+Complexity Analysis
+
+Algorithm Time Complexity (Best) Time Complexity (Average) Time Complexity (Worst) Space Complexity
+Bubble Sort O(n) O(n²) O(n²) O(1)
+Selection Sort O(n²) O(n²) O(n²) O(1)
+Insertion Sort O(n) O(n²) O(n²) O(1)
+Merge Sort O(n log n) O(n log n) O(n log n) O(n)
+Quick Sort O(n log n) O(n log n) O(n²) O(log n)
+Heap Sort O(n log n) O(n log n) O(n log n) O(1)
+
+Lyman's Analogy
+
+To better understand sorting algorithms, consider this classroom analogy:
+
+· Bubble Sort: Like students lining up by height. The tallest keeps bubbling to the end through successive comparisons with neighbors.
+· Selection Sort: Like a teacher selecting the shortest student to stand first, then the next shortest, and so on.
+· Insertion Sort: Like sorting a hand of playing cards - you take one card at a time and insert it in its proper position.
+· Merge Sort: Like dividing the class into pairs, sorting each pair, then merging sorted pairs into groups of four, and so on.
+· Quick Sort: Like choosing a pivot student (perhaps of median height), having shorter students stand on one side and taller on the other, then repeating the process for each side.
+· Heap Sort: Like building a pyramid (heap) of students by height, then repeatedly taking the tallest from the top and rebuilding the pyramid.
+
+Installation & Usage
+
+Prerequisites
+
+· C++ compiler (GCC, Clang, or MSVC)
+· CMake (optional, for building with CMake)
+
+Compilation
+
+```bash
+# Using g++ directly
+g++ -std=c++11 -o sort_demo main.cpp
+
+# Using CMake
+mkdir build
+cd build
+cmake ..
+make
+```
+
+Running the Program
+
+```bash
+./sort_demo
+```
+Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the project
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📚 Resources
+
+· GeeksforGeeks Sorting Algorithms
+· Visualgo Sorting Visualization
+· Khan Academy Algorithms Course
+
+---
+Happy Sorting......

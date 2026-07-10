@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int triangle(int n){
+void triangle(int n){
     int start =0;
     for (int i=0; i<n; i++){
         if(i%2 == 0){

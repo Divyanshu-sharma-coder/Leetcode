@@ -1,3 +1,14 @@
+// Real Life Analogy --
+
+// Grocery Shopping List: Items are written down in a specific order, and you can cross off items or add new ones anywhere on the page as you walk through different store aisles.
+
+// Music Playlists: Songs are arranged in a specific sequence from first to last, but you can easily insert a new song in the middle, reorder the tracks, or delete song number five.
+
+// Contact Directory on a Phone: Your phone stores a list of names and numbers that you can scroll through, allowing you to instantly view or edit any contact regardless of when it was added.
+
+// Leaderboards in Video Games: Players are ranked from top to bottom based on score, and the list dynamically updates positions whenever someone achieves a higher score.
+
+
 #include <iostream>
 #include <list>
 

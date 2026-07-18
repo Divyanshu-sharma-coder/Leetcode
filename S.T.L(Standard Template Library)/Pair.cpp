@@ -1,3 +1,13 @@
+// Real Life Analogy --
+
+// Coordinates (X, Y): A point on a map couples a specific latitude with a longitude to pinpoint an exact physical location.Key-Value 
+
+// Credentials: A login system links a username with its matching password to grant account access.Measurement Units: A physical reading groups a numerical magnitude with its unit, such as (180, "cm") or (75, "kg").
+
+// Product Pricing: An e-commerce tag links a product name directly to its price (e.g., "Wireless Mouse", $25).
+
+// Two-Player Matchups: Sports scoreboards link two opponents together for a game, tracking (Team A, Team B).
+
 #include <iostream>
 #include <vector>
 

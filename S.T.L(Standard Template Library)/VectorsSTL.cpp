@@ -1,3 +1,17 @@
+// Real Life Analogy --
+
+// Online Shopping Carts: As you shop, you can add an unlimited number of items to your cart, and the system automatically expands the cart's capacity to hold them.
+
+// Photo Gallery Feeds: Social media apps load images into a continuous scrollable grid; as you scroll down, new pictures are dynamically appended to the end of the container.
+
+// Text Message Threads: Your messaging app holds a dynamic history of texts that grows indefinitely with every new message you send or receive.
+
+// Undo History Buffers: Graphic design software stores your sequential action history in a dynamic array that expands with every stroke, click, or edit you make.
+
+
+
+
+
 #include <iostream>
 #include <vector>
 

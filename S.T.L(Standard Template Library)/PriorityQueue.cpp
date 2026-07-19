@@ -33,6 +33,14 @@ void Pqueue(){
 }
 void MinPqueue(){
     cout << endl;
+
+    // Breakdown
+    // 1. int: The data type your priority queue will hold.
+
+    // 2. vector<int>: The underlying data structure. Internally, a priority queue uses a dynamic array to store the binary tree.greater<int>: The comparator. By default, C++ uses less<int> (which bubbles the largest number to the top). 
+
+    // 3.By passing greater<int>, you reverse the logic so the smallest number bubbles to the top.
+    
     priority_queue<int, vector<int>, greater<int>> min_pq;
     min_pq.push(12);
     min_pq.push(293);

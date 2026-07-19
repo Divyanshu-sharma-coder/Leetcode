@@ -10,6 +10,8 @@
 // Key: Domain Name (google.com).Value: 
 // IP Address (142.250.190.46)
 
+// The key is always unique *******
+
 #include <iostream>
 #include <map>
 #include <string>

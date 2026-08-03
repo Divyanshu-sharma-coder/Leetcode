@@ -4,6 +4,7 @@
 //  So unlike brute force we just create a Hash array and fill out that array with 0 and just go to our original array and do a precomputation we just check 1 and go to index 1 and ++ it if 2 go to index 2 of hash array ++ it so now we have 1 --> 1 and 2 --> and this will go on and when we have to access it we can do it just by calling index of that hash ARRay.
 
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 

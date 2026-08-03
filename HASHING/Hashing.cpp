@@ -32,7 +32,7 @@ int main(){
         cin >> number;
 
         //  Fetch
-        cout << Hash[number] << endl;
+        cout << "The total count of "<< number << " is " << Hash[number] << endl;
     }
     return 0;
 }

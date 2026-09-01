@@ -2,18 +2,16 @@
 #include <algorithm>
 
 using namespace std;
-
 void SelectionSort(int arr[], int n){
     for(int i=0; i<=n-2; i++){
         int small = i;
-        for(int j=i; j<=n-1; j++){
-            if(arr[j]<arr[small]){
+        for(int j=i; j<= n-1; j++){
+            if(arr[j] < arr[small]){
                 small = j;
             }
         }
         swap(arr[i], arr[small]);
     }
-
 }
 
 int main(){
